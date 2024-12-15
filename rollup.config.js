@@ -4,8 +4,8 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import terser from "@rollup/plugin-terser";
-const pkg = require("./package.json");
 
+const pkg = require("./package.json");
 export default [
   {
     input: "src/index.ts",
@@ -13,11 +13,13 @@ export default [
       {
         file: pkg.main,
         format: "cjs",
+        banner: '"use client";',
         sourcemap: true,
       },
       {
         file: pkg.module,
         format: "esm",
+        banner: '"use client";',
         sourcemap: true,
       },
     ],
@@ -26,7 +28,9 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      terser(),
+      terser({
+        compress: { directives: false },
+      }),
     ],
     external: ["react", "react-dom"],
   },

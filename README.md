@@ -1,4 +1,5 @@
 <h1 align="center">
+  <br>
   Sweep.
   <br>
   <br>
@@ -22,7 +23,7 @@
 ## Key Features
 
 - **Simple to Use:** A clean and easy-to-understand API that gets you up and running in no time.
-- **Effortless Animations:** I comes with transitions for opening, closing, and switching children.
+- **Effortless Animations:** It comes with transitions for opening, closing, and switching children.
 - **Built for Speed:** Lightweight and optimized for great performance, even on slower devices.
 
 ## How To Use
@@ -107,7 +108,6 @@ import { SweepWrapper } from "@aiko-lab/sweep";
             <th>Prop</th>
             <th>Type</th>
             <th>Required</th>
-            <th>Default</th>
             <th width="100%">Description</th>
         </tr>
     </thead>
@@ -116,35 +116,30 @@ import { SweepWrapper } from "@aiko-lab/sweep";
             <td align="start"><code>children</code></td>
             <td align="center">ReactNode</td>
             <td align="center"><code>true</code></td>
-            <td align="center">-</td>
             <td align="start">In short, your App.</td>
         </tr>
         <tr valign="top">
             <td align="start"><code>backgroundColor</code></td>
             <td align="center">String</td>
             <td align="center"><code>false</code></td>
-            <td align="center">-</td>
             <td align="start">Your App's background color.</td>
         </tr>
         <tr valign="top">
             <td align="start"><code>foregroundColor</code></td>
             <td align="center">String</td>
             <td align="center"><code>false</code></td>
-            <td align="center">-</td>
             <td align="start">The slide-up panel's background color.</td>
         </tr>
         <tr valign="top">
             <td align="start"><code>backgroundClassName</code></td>
             <td align="center">String</td>
             <td align="center"><code>false</code></td>
-            <td align="center">-</td>
             <td align="start">In case you are using tailwindCSS you could pass the background color (App) as a className. <br> example: <code>bg-indigo-600</code></td>
         </tr>
         <tr valign="top">
             <td align="start"><code>foregroundClassName</code></td>
             <td align="center">String</td>
             <td align="center"><code>false</code></td>
-            <td align="center">-</td>
              <td align="start">In case you are using tailwindCSS you could pass the background color (Panel) as a className. <br> example: <code>bg-indigo-900</code></td>
         </tr>
     </tbody>
@@ -161,7 +156,7 @@ import { useSweep } from "@aiko-lab/sweep";
 
 ...
 
-const sheet = useSweep({
+const sweep = useSweep({
     blur: false,
     disableTouchEvents: false,
     blockBodyClick: false,
