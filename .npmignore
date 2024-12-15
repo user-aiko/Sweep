@@ -1,0 +1,12 @@
+src/
+rollup.config.js
+webpack.config.js
+tsconfig.json
+test/
+coverage/
+*.log
+*.spec.js
+*.test.js
+node_modules/
+.vscode/
+.idea/

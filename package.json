@@ -1,0 +1,42 @@
+{
+  "name": "@aiko-lab/sweep",
+  "version": "1.0.7",
+  "description": "Sweep is a slide-up panel for displaying additional content.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/user-aiko/sweep.git"
+  },
+  "keywords": [
+    "sheet",
+    "react",
+    "sweep"
+  ],
+  "author": "aiko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/user-aiko/sweep/issues"
+  },
+  "homepage": "https://github.com/user-aiko/sweep#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/react": "^19.0.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup": "^4.28.1"
+  }
+}
