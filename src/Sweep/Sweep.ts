@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { isSameElement } from "./helpers";
 import useSweepContext from "./hooks/useSweepContext";
 
-type sweepConfig = {
+export type sweepConfig = {
   blur?: boolean;
   disableTouchEvents?: boolean;
   blockBodyClick?: boolean;
@@ -10,7 +10,7 @@ type sweepConfig = {
   borderRadius?: number;
 };
 
-type sweepCallbacks = {
+export type sweepCallbacks = {
   onToggle?: (state: boolean) => void;
   onSwitch?: (
     oldChildren: React.ReactNode,
