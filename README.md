@@ -92,10 +92,10 @@ import { SweepWrapper } from "@aiko-lab/sweep";
 ...
 
 <SweepWrapper
-  backgroundColor="hsl(0, 0%, 0%)"
-  foregroundColor="hsl(0, 0%, 10%)"
-  backgroundColorClass="bg-black"
-  foregroundColor="bg-white"
+  foregroundColor="hsl(0, 0%, 0%)"
+  backgroundColor="hsl(0, 0%, 10%)"
+  foregroundColorClass="bg-black"
+  backgroundColorClass="bg-white"
 >
   {children}
 </SweepWrapper>
@@ -120,25 +120,25 @@ import { SweepWrapper } from "@aiko-lab/sweep";
             <td align="start">In short, your App.</td>
         </tr>
         <tr valign="top">
-            <td align="start"><code>backgroundColor</code></td>
+            <td align="start"><code>foregroundColor</code></td>
             <td align="center">String</td>
             <td align="center"><code>false</code></td>
             <td align="start">Your App's background color.</td>
         </tr>
         <tr valign="top">
-            <td align="start"><code>foregroundColor</code></td>
+            <td align="start"><code>backgroundColor</code></td>
             <td align="center">String</td>
             <td align="center"><code>false</code></td>
             <td align="start">The slide-up panel's background color.</td>
         </tr>
         <tr valign="top">
-            <td align="start"><code>backgroundClassName</code></td>
+            <td align="start"><code>foregroundClassName</code></td>
             <td align="center">String</td>
             <td align="center"><code>false</code></td>
             <td align="start">In case you are using tailwindCSS you could pass the background color (App) as a className. <br> example: <code>bg-indigo-600</code></td>
         </tr>
         <tr valign="top">
-            <td align="start"><code>foregroundClassName</code></td>
+            <td align="start"><code>fbackgroundClassName</code></td>
             <td align="center">String</td>
             <td align="center"><code>false</code></td>
              <td align="start">In case you are using tailwindCSS you could pass the background color (Panel) as a className. <br> example: <code>bg-indigo-900</code></td>
