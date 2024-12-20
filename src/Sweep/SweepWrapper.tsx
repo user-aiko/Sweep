@@ -87,8 +87,8 @@ const SweepWrapper: React.FC<SweepWrapperProps> = ({
       {/* parent */}
       <div
         ref={parentRef}
-        style={parentStyle(open, backgroundColor, sweepConfig.blockBodyClick)}
-        className={backgroundClassName}
+        style={parentStyle(open, foregroundColor, sweepConfig.blockBodyClick)}
+        className={foregroundClassName}
       >
         {/* Indicator */}
         {/* An issue with the positioning when the content is scrollable */}
@@ -98,8 +98,8 @@ const SweepWrapper: React.FC<SweepWrapperProps> = ({
 
       {/* Overlay */}
       <div
-        style={overlayStyle(open, foregroundColor)}
-        className={foregroundClassName}
+        style={overlayStyle(open, backgroundColor)}
+        className={backgroundClassName}
         onClick={() => {
           if (!sweepConfig.clickBodyToClose) return;
           setOpen(false);
