@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">A minimal slide-up panel built for <a href="https://react.dev/" target="_blank">React</a> ⦁ <a href="https://react.dev/" target="_blank">Live preview</a> </h4>
+<h4 align="center">A minimal slide-up panel built for <a href="https://react.dev/" target="_blank">React</a> ⦁ <a href="https://lab.ai-ko.dev/sweep" target="_blank">Live preview</a> </h4> ⦁ <a href="https://lab.ai-ko.dev/sweep/docs" target="_blank">Documentation</a> </h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
