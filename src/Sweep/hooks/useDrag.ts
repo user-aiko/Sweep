@@ -13,7 +13,7 @@ const useDrag = (
   const [isDragging, setIsDragging] = useState(false);
   const [startPosY, setStartPosY] = useState(0);
 
-  const { velocityToTime, updateVelocity } = useYVelocity();
+  const { velocityToTime, updateVelocity, resetVelocity } = useYVelocity();
   const latestPositionYRef = useRef(0);
 
   const onTouchDown = (event: TouchEvent): void => {
@@ -50,6 +50,7 @@ const useDrag = (
     setPositionY(0);
     setStartPosY(0);
     setIsDragging(false);
+    resetVelocity();
   };
 
   useEffect(() => {

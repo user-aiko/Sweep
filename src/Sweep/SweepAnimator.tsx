@@ -19,8 +19,7 @@ const SweepAnimator = ({
   setIsSwitching,
   parentRef,
   setOpen,
-  isSwitching,
-  justOpened,
+  tempRef,
   setIsChanging,
   isChanging,
   isClosing,
@@ -30,6 +29,7 @@ const SweepAnimator = ({
   isOpen: boolean;
   children: React.ReactNode;
   nextChildren: React.ReactNode;
+  tempRef: React.MutableRefObject<HTMLDivElement | null>;
   sheetRef: React.MutableRefObject<HTMLDivElement | null>;
   setSheetChildren: (children: React.ReactNode) => void;
   setNextChildren: (children: React.ReactNode) => void;
@@ -49,7 +49,7 @@ const SweepAnimator = ({
   };
 }) => {
   usePreventScroll({ isDisabled: !isOpen });
-  const tempRef = useRef<HTMLDivElement>(null);
+
   const { onTouchDown } = useDrag(
     setOpen,
     parentRef,

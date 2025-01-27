@@ -38,7 +38,7 @@ const SweepWrapper: React.FC<SweepWrapperProps> = ({
 
   const sheetRef = useRef<HTMLDivElement>(null);
   const parentRef = useRef<HTMLDivElement>(null);
-
+  const tempRef = useRef<HTMLDivElement>(null);
   const [justOpened, setJustOpened] = useState(false);
 
   useEffect(() => {
@@ -53,12 +53,22 @@ const SweepWrapper: React.FC<SweepWrapperProps> = ({
 
   useEffect(() => {
     if (parentRef.current && sheetRef.current) {
+      var crnt = sheetRef.current;
+      var delay = 0;
+      var duration = 500;
+      if (tempRef.current) {
+        crnt = tempRef.current;
+        delay = 100;
+        duration = 1000;
+      }
       parentMainAnimation(
-        sheetRef.current,
+        crnt,
         parentRef.current,
         open,
         isSwitching,
-        sweepConfig.borderRadius
+        sweepConfig.borderRadius,
+        delay,
+        duration
       ).onfinish = () => {
         if (open) setIsOpening(false);
         else setIsClosing(false);
@@ -117,6 +127,7 @@ const SweepWrapper: React.FC<SweepWrapperProps> = ({
             <SweepAnimator
               isOpen={open}
               sheetRef={sheetRef}
+              tempRef={tempRef}
               nextChildren={nextChildren}
               setSheetChildren={setSheetChildren}
               setNextChildren={setNextChildren}
