@@ -7,7 +7,8 @@ const useDrag = (
   parentRef: React.MutableRefObject<HTMLDivElement | null>,
   sheetRef: React.MutableRefObject<HTMLDivElement | null>,
   isOpen: boolean,
-  borderRadius: number
+  borderRadius: number,
+  snapPoint: number
 ) => {
   const [positionY, setPositionY] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -36,14 +37,14 @@ const useDrag = (
   };
 
   const onTouchUp = () => {
-    if (latestPositionYRef.current > 50) {
+    if (latestPositionYRef.current > snapPoint) {
       setOpen(false);
     }
     if (sheetRef?.current && parentRef?.current) {
       dragEndAnimation(
         sheetRef?.current,
         parentRef?.current,
-        latestPositionYRef.current > 50,
+        latestPositionYRef.current > snapPoint,
         velocityToTime(10)
       );
     }

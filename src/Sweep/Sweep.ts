@@ -8,6 +8,7 @@ export type sweepConfig = {
   blockBodyClick?: boolean;
   clickBodyToClose?: boolean;
   borderRadius?: number;
+  snapPoint?: number;
 };
 
 export type sweepCallbacks = {
@@ -25,6 +26,7 @@ function useSweep(
     blockBodyClick: false,
     clickBodyToClose: false,
     borderRadius: 20,
+    snapPoint: 50,
   },
   callbacks?: sweepCallbacks
 ) {

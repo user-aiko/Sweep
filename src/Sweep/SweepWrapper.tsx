@@ -58,8 +58,8 @@ const SweepWrapper: React.FC<SweepWrapperProps> = ({
       var duration = 500;
       if (tempRef.current) {
         crnt = tempRef.current;
-        delay = 100;
-        duration = 1000;
+        delay = 50;
+        duration = 800;
       }
       parentMainAnimation(
         crnt,

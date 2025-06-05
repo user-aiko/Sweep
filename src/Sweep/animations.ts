@@ -113,8 +113,12 @@ function sheetFadeOutAnimation(
   return sheet.animate(
     {
       filter: blur ? ["blur(0px)", "blur(10px)"] : "blur(0px)",
+      transformOrigin: transformRatio < 0 ? "bottom center" : "top center",
       opacity: [1, 0],
-      transform: ["translateY(0%)", `translateY(${transformRatio * 5}%)`],
+      transform: [
+        "translateY(0%) scale(1)",
+        `translateY(${transformRatio * 5}%) scale(1.01)`,
+      ],
     },
     {
       duration: 200,
@@ -132,12 +136,15 @@ function sheetFadeInAnimation(
   return sheet.animate(
     {
       filter: blur ? ["blur(10px)", "blur(0px)"] : "blur(0px)",
+      transformOrigin: transformRatio < 0 ? "bottom center" : "top center",
       opacity: [0, 1],
-      transform: [`translateY(${-transformRatio * 5}%)`, "translateY(0%)"],
+      transform: [
+        `translateY(${-transformRatio * 5}%) scale(0.99)`,
+        "translateY(0%) scale(1)",
+      ],
     },
     {
-      duration: 700,
-      // easing: "cubic-bezier(0.0, 0.5, 0.5, 1.0)",
+      duration: 400,
       easing: EASES.glide,
       fill: "forwards",
     }
@@ -158,7 +165,7 @@ function sheetMainAnimation(
       opacity: isOpen ? 1 : 0,
     },
     {
-      duration: 500,
+      duration: 600,
       // easing: "cubic-bezier(0.4, 0.0, 0.0, 1.0)",
       easing: EASES.glide,
       fill: "forwards",

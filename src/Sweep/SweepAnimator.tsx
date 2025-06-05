@@ -8,6 +8,7 @@ import {
 } from "./animations";
 import { usePreventScroll } from "./hooks/usePreventScroll";
 import useDrag from "./hooks/useDrag";
+import { sweepConfig } from "./Sweep";
 
 const SweepAnimator = ({
   isOpen,
@@ -42,11 +43,7 @@ const SweepAnimator = ({
   isChanging: boolean;
   isOppening: boolean;
   setIsChanging: (isChanging: boolean) => void;
-  config: {
-    blur?: boolean;
-    disableTouchEvents?: boolean;
-    borderRadius: number;
-  };
+  config: sweepConfig;
 }) => {
   usePreventScroll({ isDisabled: !isOpen });
 
@@ -55,7 +52,8 @@ const SweepAnimator = ({
     parentRef,
     sheetRef,
     isOpen,
-    config.borderRadius
+    config.borderRadius ?? 20,
+    config.snapPoint ?? 50
   );
 
   useEffect(() => {
