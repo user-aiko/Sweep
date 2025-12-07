@@ -6,7 +6,7 @@ import { SweepWrapper, useSweep } from "../../src/index";
 function App() {
   return (
     <>
-      <SweepWrapper backgroundColor="rgb(15, 10, 10)" foregroundColor="black">
+      <SweepWrapper backgroundColor="#212121" foregroundColor="black">
         <MainPage />
       </SweepWrapper>
     </>
